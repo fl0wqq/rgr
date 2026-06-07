@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нариси Версо</title>
+    <link rel="stylesheet" href="rgr.css">
+</head>
+<body>
+
+<audio id="bgMusic" loop>
+    <source src="sound/verso_dls.mp3" type="audio/mpeg">
+</audio>
+
+<div class="header">
+    <div class="logo-area">
+        <div class="subtitle">Clair Obscur</div>
+        <div class="title">Expedition 33</div>
+    </div>
+    <div class="nav">
+        <a href="main.html">Головна</a>
+        <a href="gommage.html">Гоммаж</a>
+        <a href="characters.html">Склад Експедиції</a>
+        <a href="mechanics.html">Бойова система</a>
+        <a href="world.html">Світ картини</a>
+        <a href="lumiere.html">Люмьєр</a>
+        <a href="gestrals.html">Селище Гестралів</a>
+        <a href="verso_dlc.html" class="active">Нариси Версо</a>
+    </div>
+    <div class="right-panel">
+        <button class="music-btn" id="musicToggle">Вимкнути музику</button>
+    </div>
+</div>
+
+<div class="content">
+    <div class="section-title">Нариси Версо</div>
+    <div class="section-tagline">Cвіт оригінального творця та відлуння його пам'яті.</div>
+
+    <img src="images/verso_dlc.jpg" alt="Verso's Drafts DLC" class="planet-image">
+
+    <div class="text">
+        <p>Безкоштовне доповнення «Нариси Версо» відкриває гравцям найболючішу таємницю родини, що створила цей світ. Справжній, оригінальний Версо трагічно <strong>загинув у пожежі</strong> у реальному світі. Осліплена невимовним болем та скорботою, його мати — Художниця — закрилася всередині свого полотна. Вона виплеснула всю свою тугу на полотно і створила копію сина — нашого супутника Версо.</p>
+        <p>Наш Версо отримав абсолютно всі спогади, почуття та характер оригінального хлопчика. Він чітко усвідомлює, що він — лише привид із фарби, штучне відлуння померлої дитини. Щоб знайти ці «Нариси» — незавершені дитячі начерки справжнього Версо, загін має скористатися допомогою Еск'є в 3-му Акті й пірнути у глибокий вир на схід від Люмьєра.</p>
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-card">
+            <h3>Родинна трагедія та вибір Версо</h3>
+            <p>Поки Художниця повільно вбиває себе довгим перебуванням у вигаданому світі, її чоловік <strong>Ренуар</strong> намагається врятувати кохану. Ренуар не є частиною картини — він реальний людина, яка шукає спосіб витягнути дружину назад у реальність. Наш Версо, попри те, що завдячує Художниці своїм існуванням, обирає сторону батька (Ренуара). Він готовий піти проти своєї творчині, щоб зупинити її саморуйнування.</p>
+        </div>
+        <div class="grid-card">
+            <h3>Ігри серед спогадів</h3>
+            <p>Уся локація — це втілення дитячої кімнати загиблого хлопчика, розірване на шматки фарби. Тут на гравців чекають сюрреалістичні головоломки: стрибки на батутах, утримання рівноваги на гойдалках та гра в «класики», де крокувати по цифрах від 1 до 10 потрібно в суворий таймінг.</p>
+        </div>
+        <div class="grid-card">
+            <h3>Хроматичні кошмари</h3>
+            <p>Уламки дитячої пам'яті охороняють спотворені фарбою версії ворогів: Хроматичний Франктал, Хроматичний Машинап'є та унікальний бос — Недопечений Гестрал, у битві з яким механіка зав'язана на збиванні летючих повітряних кульок.</p>
+        </div>
+    </div>
+
+    <div class="footer-note">
+        «Справжній Версо згорів у вогні, а я — лише мазок фарби на полотні її божевілля».
+    </div>
+</div>
+<script>
+    const music = document.getElementById("bgMusic");
+    const button = document.getElementById("musicToggle");
+    window.addEventListener("click", () => { music.play().catch(e => {}); }, { once: true });
+    button.addEventListener("click", () => {
+        if(music.paused){ music.play(); button.textContent = "Вимкнути музику"; } 
+        else { music.pause(); button.textContent = "Увімкнути музику"; }
+    });
+</script>
+</body>
+</html>

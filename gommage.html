@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гоммаж</title>
+    <link rel="stylesheet" href="rgr.css">
+</head>
+<body>
+
+<audio id="bgMusic" loop>
+    <source src="sound/gommage.mp3" type="audio/mpeg">
+</audio>
+
+<div class="header">
+    <div class="logo-area">
+        <div class="subtitle">Clair Obscur</div>
+        <div class="title">Expedition 33</div>
+    </div>
+    <div class="nav">
+        <a href="main.html">Головна</a>
+        <a href="gommage.html" class="active">Гоммаж</a>
+        <a href="characters.html">Склад Експедиції</a>
+        <a href="mechanics.html">Бойова система</a>
+        <a href="world.html">Світ картини</a>
+        <a href="lumiere.html">Люмьєр</a>
+        <a href="gestrals.html">Селище Гестралів</a>
+        <a href="verso_dlc.html">Нариси Версо</a>
+    </div>
+    <div class="right-panel">
+        <button class="music-btn" id="musicToggle">Вимкнути музику</button>
+    </div>
+</div>
+
+<div class="content">
+    <div class="section-title">Таємниця Моноліту та Прокляття</div>
+    <div class="section-tagline">Раз на рік вона прокидається, щоб забрати ціле покоління.</div>
+
+    <img src="images/gommage.jpg" alt="The Paintress" class="planet-image">
+
+    <div class="text">
+        <p>У світі Clair Obscur: Expedition 33 людство не просто вмирає від хвороб чи воєн — воно піддається <strong>Гоммажу</strong>. Раз на рік гігантський Моноліт посеред світу спалахує, і Художниця починає процес очищення полотна. Гоммаж — це безжальне змивання та стирання живих людей з текстури Картини. Коли число на Моноліті змінюється, усі люди відповідного віку просто зникають, залишаючи по собі лише розмиті плями фарби та порожнечу.</p>
+        <p>Зараз Моноліт готується випалити число «33». Це означає, що кожен тридцятитрирічний житель міста Люмьєр приречений на миттєве стирання. 33-тя Експедиція — це останній відчайдушний похід тих, кому виповнилося 32, з метою знищити Художницю до того, як вона здійснить черговий акт Гоммажу.</p>
+    </div>
+    <div>
+        <div class="grid-container">
+            <div class="grid-card">
+                <h3>Миттєве зникнення</h3>
+                <p>У ту саму мить, коли фарба торкається каменю, кожен житель планети, чий вік точно дорівнює намальованій цифрі, починає світитися блідим світлом і розчиняється в повітрі, залишаючи по собі лише червоні пелюстки.</p>
+            </div>
+            <div class="grid-card">
+            <h3>Тінь з реального світу</h3>
+            <p>Уламки щоденників, які загін знаходить під час Експедиції, згадують ім'я <strong>Ренуара</strong> — людини з плоті та крові, яка залишилася поза межами малюнка. Його невидима присутність відчувається у кожному акті Гоммажу. Хтось вважає його руйнівником, але правда набагато складніша: він відчайдушно намагається розірвати зв'язок своєї родини з полотном, поки Картина остаточно не висмоктала їхні життя.</p>
+            </div>
+            <div class="grid-card">
+                <h3>Невдалі спроби</h3>
+                Людство ніколи не здавалося без бою. До цього моменту було організовано рівно 67 Експедицій. Кожна з них складалася з найкращих воїнів відповідного віку. І всі вони зазнали невдачі, не зумівши підібратися до лігва божества.
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-note">
+        «Гоммаж не знає жалю. Вона просто стирає нас, як невдалий ескіз».
+    </div>
+</div>
+
+<script>
+    const music = document.getElementById("bgMusic");
+    const button = document.getElementById("musicToggle");
+    window.addEventListener("click", () => { music.play().catch(e => {}); }, { once: true });
+    button.addEventListener("click", () => {
+        if(music.paused){ music.play(); button.textContent = "Вимкнути музику"; } 
+        else { music.pause(); button.textContent = "Увімкнути музику"; }
+    });
+</script>
+</body>
+</html>

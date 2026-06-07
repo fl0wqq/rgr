@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clair Obscur: Expedition 33</title>
+    <link rel="stylesheet" href="rgr.css">
+</head>
+<body>
+
+<audio id="bgMusic" loop>
+    <source src="sound/main.mp3" type="audio/mpeg">
+</audio>
+
+<div class="header">
+    <div class="logo-area">
+        <div class="subtitle">Clair Obscur</div>
+        <div class="title">Expedition 33</div>
+    </div>
+    <div class="nav">
+        <a href="Main.html" class="active">Головна</a>
+        <a href="gommage.html">Гоммаж</a>
+        <a href="characters.html">Склад Експедиції</a>
+        <a href="mechanics.html">Бойова система</a>
+        <a href="world.html">Світ картини</a>
+        <a href="lumiere.html">Люмьєр</a>
+        <a href="gestrals.html">Селище Гестралів</a>
+        <a href="verso_dlc.html">Нариси Версо</a>
+    </div>
+    <div class="right-panel">
+        <button class="music-btn" id="musicToggle">Вимкнути музику</button>
+    </div>
+</div>
+
+<div class="content">
+    <div class="section-title">Clair Obscur: Expedition 33</div>
+    <div class="section-tagline">Остання подорож з надією на майбутнє.</div>
+
+    <img src="images/main.avif" alt="Expedition 33 Banner" class="planet-image">
+
+    <div class="text">
+        <p><strong>Clair Obscur: Expedition 33</strong> — це визначна тактична рольова гра, створена студією Sandfall Interactive. Натхненна витонченим мистецтвом французької Прекрасної епохи (Belle Époque) та класичними покроковими RPG, гра пропонує неймовірний, похмурий та глибоко емоційний досвід подорожі, з якої герої не знають чи зможуть повернутися назад.</p>
+        
+        <p>Сюжет розповідає про приречений світ, де людство перебуває на межі тотального зникнення через сюрреалістичну загрозу — таємничу жінку, відому як Художниця. Кожен рік вона прокидається лише задля однієї дії: намалювати на гігантському моноліті число. Кожен, чий вік збігається з цим числом, миттєво розсипається на червоні пелюстки.</p>
+        
+        <p>Тепер, коли її пензель готується вивести цифру <strong>«33»</strong>, бійці збираються у фінальний похід — 33-ю Експедицію. Їхнє завдання самогубне, але єдине можливе: дійти до лігва Художниці та знищити її до того, як вона викреслить ціле покоління.</p>
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-card">
+            <h3>Візуальний стиль</h3>
+            <p>Дивовижний світ, де класична французька архітектура XIX століття переплітається з містичними руїнами та сюрреалістичними картинами.</p>
+        </div>
+        <div class="grid-card">
+            <h3>Еволюція покрокових боїв</h3>
+            <p>Унікальний сплав класичної тактики вибору команд та динамічного екшену, де парирування, ухилення та таймінги вирішують усе.</p>
+        </div>
+        <div class="grid-card">
+            <h3>Глибока драма</h3>
+            <p>Історія про людей, які точно знають, що їм залишилося жити менше року. Їхній шлях — це хроніка жертовності та відчайдушної надії.</p>
+        </div>
+    </div>
+
+    <div class="footer-note">
+        "For Those Who Come After".
+    </div>
+</div>
+
+<script>
+    const music = document.getElementById("bgMusic");
+    const button = document.getElementById("musicToggle");
+    window.addEventListener("click", () => { music.play().catch(e => {}); }, { once: true });
+    button.addEventListener("click", () => {
+        if(music.paused){ music.play(); button.textContent = "Вимкнути музику"; } 
+        else { music.pause(); button.textContent = "Увімкнути музику"; }
+    });
+</script>
+</body>
+</html>
