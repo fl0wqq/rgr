@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Селище Гестралів</title>
+    <link rel="stylesheet" href="rgr.css">
+</head>
+<body>
+
+<audio id="bgMusic" loop>
+    <source src="sound/gestrals.mp3" type="audio/mpeg">
+</audio>
+
+<div class="header">
+    <div class="logo-area">
+        <div class="subtitle">Clair Obscur</div>
+        <div class="title">Expedition 33</div>
+    </div>
+    <div class="nav">
+        <a href="main.html">Головна</a>
+        <a href="gommage.html">Гоммаж</a>
+        <a href="characters.html">Склад Експедиції</a>
+        <a href="mechanics.html">Бойова система</a>
+        <a href="world.html">Світ картини</a>
+        <a href="lumiere.html">Люмьєр</a>
+        <a href="gestrals.html" class="active">Селище Гестралів</a>
+        <a href="verso_dlc.html">Нариси Версо</a>
+    </div>
+    <div class="right-panel">
+        <button class="music-btn" id="musicToggle">Вимкнути музику</button>
+    </div>
+</div>
+
+<div class="content">
+    <div class="section-title">Селище Гестралів</div>
+    <div class="section-tagline">Світ веселих пензлів.</div>
+
+    <img src="images/gestrals.webp" alt="Gestral Village" class="planet-image">
+
+    <div class="text">
+        <p>На Континенті, одразу за межами Стародавнього Святилища, мандрівники потрапляють у дивовижне <strong>Селище Гестралів</strong>. Ця зона виділяється своєю сюрреалістичною флорою та криваво-червоною травою, що покриває землю полотна. Тут живуть Гестралі — корінні істоти цієї мальованої реальності, чий побут тісно пов'язаний із законами Художниці.</p>
+        <p>На відміну від міських районів Люм'єра, тут панує дика, первісна магія фарби. Селище побудоване навколо гігантських природних напливів пігменту, які Гестралі використовують для своїх ритуалів та захисту від диких Хроматичних істот. Дослідження цієї території дозволить Експедиції краще зрозуміти закони, за якими функціонує Картина поза межами людського сприйняття.</p>
+    </div>
+
+    <!-- Новий блок з детальним описом раси Гестралів -->
+    <div class="grid-container" style="margin-bottom: 30px;">
+        <div class="grid-card" style="grid-column: span 3; background: rgba(179, 143, 67, 0.05); border-left: 4px solid #b38f43;">
+            <h3>Хто такі Гестралі?</h3>
+            <p><strong>Гестралі</strong> — це унікальна таємнича раса корінних жителів, народжених безпосередньо всередині полотна Художниці. На відміну від людей з Люмьєра, вони мають чудернацьку, магічну анатомію, вони наче живі пензлі. Вони не підвладні людському страху перед гоммажем, адже сприймають фарбу як природне середовище існування. Гестрали володіють глибокою мудрістю щодо внутрішнього устрою Картини.</p>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-card">
+            <h3>Арена та випробування Сіель</h3>
+            <p>Головною подією в цій локації стає запеклий сюжетний бос-файт на Арені Гестралів. Загін змушений зійтися в бою з їхньою подругою. Сіель повертається до гурту після бою.</p>
+        </div>
+        <div class="grid-card">
+            <h3>Гніздо Еск'є</h3>
+            <p>Неподалік від селища розташоване гніздо легендарної крилатої істоти Еск'є. Саме тут відбувається перша доленосна зустріч гурту з цим величним створінням, яке згодом стане незамінним провідником Експедиції Континентом.</p>
+        </div>
+        <div class="grid-card">
+            <h3>Пошук втрачених Гестралів</h3>
+            <p>Селище виступає центром великої квестової лінії з пошуку 9 Загублених Гестралів. Гравцеві доведеться уважно прочісувати інші куточки світу — від Білого Дерева до Нескінченної Вежі, щоб повернути малюків додому.</p>
+        </div>
+    </div>
+
+    <div class="footer-note" style="margin-top: 40px;">
+        «У Світі Картини навіть гестралі мають власну долю та випробування».
+    </div>
+
+<script>
+    const music = document.getElementById("bgMusic");
+    const button = document.getElementById("musicToggle");
+    window.addEventListener("click", () => { music.play().catch(e => {}); }, { once: true });
+    button.addEventListener("click", () => {
+        if(music.paused){ music.play(); button.textContent = "Вимкнути музику"; } 
+        else { music.pause(); button.textContent = "Увімкнути музику"; }
+    });
+</script>
+</body>
+</html>

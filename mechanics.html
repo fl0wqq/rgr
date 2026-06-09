@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бойова система</title>
+    <link rel="stylesheet" href="rgr.css">
+</head>
+<body>
+
+<audio id="bgMusic" loop>
+    <source src="sound/mechanics.mp3" type="audio/mpeg">
+</audio>
+
+<div class="header">
+    <div class="logo-area">
+        <div class="subtitle">Clair Obscur</div>
+        <div class="title">Expedition 33</div>
+    </div>
+    <div class="nav">
+        <a href="main.html">Головна</a>
+        <a href="gommage.html">Гоммаж</a>
+        <a href="characters.html">Склад Експедиції</a>
+        <a href="mechanics.html" class="active">Бойова система</a>
+        <a href="world.html">Світ картини</a>
+        <a href="lumiere.html">Люмьєр</a>
+        <a href="gestrals.html">Селище Гестралів</a>
+        <a href="verso_dlc.html">Нариси Версо</a>
+    </div>
+    <div class="right-panel">
+        <button class="music-btn" id="musicToggle">Вимкнути музику</button>
+    </div>
+</div>
+
+<div class="content">
+    <div class="section-title">Еволюція тактичного бою</div>
+    <div class="section-tagline">Покрокова стратегія, де кожна секунда бою вимагає сконцентрованості.</div>
+
+    <img src="images/mechanics.png" alt="Combat Gameplay" class="planet-image">
+
+    <div class="text">
+        <p>Розробники створили бойову систему, яка поєднує класичне покрокове планування JRPG та реактивні механіки динамічних екшенів. Гравцеві доводиться бути сконцентрованим кожну секунду бою.</p>
+        <p>Успіх у зіткненнях залежить від вашої здатності читати наміри ворога за його замахами та зміною кольору Хроми. Кожен персонаж володіє унікальною шкалою концентрації, яка заповнюється при ідеальних діях і відкриває доступ до суперприйомів. Ефективне використання вразливостей дозволяє повністю паралізувати супротивника, перехоплюючи ініціативу в бою.</p>
+
+       <div class="grid-container">
+        <div class="grid-card">
+            <h3>Парирування та ухиляння</h3>
+            <p>По анімації ворога можна зрозуміти таймінг атаки. Якщо ви вчасно натиснете кнопку парирування або ухилення, ваш герой не отримає шкоди або проведе миттєву контратаку.</p>
+        </div>
+        <div class="grid-card">
+            <h3>Система комбо-ритму</h3>
+            <p>Під час виконання власних умінь героїв, ритмічне натискання клавіш в ідеальний таймінг збільшує силу заклинання або фізичного удару.</p>
+        </div>
+        <div class="grid-card">
+            <h3>Синергія унікальних механік</h3>
+            <p>Комбінуйте елементальні плями Люне із передвістями Сіель або бойовими стійками Маель, щоб створювати ланцюжки руйнівних ефектів.</p>
+        </div>
+    </div>
+
+    <div class="footer-note">
+        "Покроковий бій ще ніколи не відчувався настільки небезпечним та кінематографічним".
+    </div>
+</div>
+
+<script>
+    const music = document.getElementById("bgMusic");
+    const button = document.getElementById("musicToggle");
+    window.addEventListener("click", () => { music.play().catch(e => {}); }, { once: true });
+    button.addEventListener("click", () => {
+        if(music.paused){ music.play(); button.textContent = "Вимкнути музику"; } 
+        else { music.pause(); button.textContent = "Увімкнути музику"; }
+    });
+</script>
+</body>
+</html>

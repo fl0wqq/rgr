@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Світ картини</title>
+    <link rel="stylesheet" href="rgr.css">
+</head>
+<body>
+
+<audio id="bgMusic" loop>
+    <source src="sound/world.mp3" type="audio/mpeg">
+</audio>
+
+<div class="header">
+    <div class="logo-area">
+        <div class="subtitle">Clair Obscur</div>
+        <div class="title">Expedition 33</div>
+    </div>
+    <div class="nav">
+        <a href="main.html">Головна</a>
+        <a href="gommage.html">Гоммаж</a>
+        <a href="characters.html">Склад Експедиції</a>
+        <a href="mechanics.html">Бойова система</a>
+        <a href="world.html" class="active">Світ картини</a>
+        <a href="lumiere.html">Люмьєр</a>
+        <a href="gestrals.html">Селище Гестралів</a>
+        <a href="verso_dlc.html">Нариси Версо</a>
+    </div>
+    <div class="right-panel">
+        <button class="music-btn" id="musicToggle">Вимкнути музику</button>
+    </div>
+</div>
+
+<div class="content">
+    <div class="section-title">Сюрреалістична Belle Époque</div>
+    <div class="section-tagline">Світ смертельної краси, застиглий у фарбах Художниці.</div>
+
+    <img src="images/world.jpg" alt="Game World Environment" class="planet-image">
+
+    <div class="text">
+        <p>Подорож 33-ї Експедиції пролягає крізь дивовижні та лякаючі місця. Весь світ виглядає як жива картина, де прекрасна французька класика змішана з руйнацією та кошмарами.</p>
+        <p>Світ Картини — це велична, але водночас моторошна екосистема, створена з фарб, спогадів та невимовного смутку. Кожна локація Континенту є відображенням певного етапу життя та психологічного стану Творчині: від світлої надії до абсолютного розпачу.</p>
+        <p>Мандруючи цими землями, Експедиція стикається із сюрреалістичними архітектурними формами, де живі полотна переплітаються з реальними об'єктами. Від Білого Дерева до Нескінченної Вежі — кожен крок наближає героїв до епіцентру Хроми, випробовуючи їхню рішучість і змушуючи шукати приховані підказки, залишені попередніми поколіннями в надії зупинити Гоммаж.</p>
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-card">
+            <h3>Застиглі міста</h3>
+            <p>Величні колись мегаполіси з театрами, фонтанами та витонченими бруківками, які зараз повністю безлюдні й заповнені лише білим попелом зниклих поколінь.</p>
+        </div>
+        <div class="grid-card">
+            <h3>Сюрреалістичні пустки</h3>
+            <p>Локації, де закони фізики та логіки починають викривлятися. Велетенські статуї, літаючі уламки архітектури та літаючі острова.</p>
+        </div>
+        <div class="grid-card">
+            <h3>Сліди попередників</h3>
+            <p>Важлива частина дослідження світу — знаходження таборів та залишків попередніх експедицій. Їхні щоденники розкривають секрети та шлях уперед.</p>
+        </div>
+    </div>
+
+    <div class="footer-note">
+        "Кожна локація — це витвір мистецтва з відчуттям безнадійності".
+    </div>
+</div>
+
+<script>
+    const music = document.getElementById("bgMusic");
+    const button = document.getElementById("musicToggle");
+    window.addEventListener("click", () => { music.play().catch(e => {}); }, { once: true });
+    button.addEventListener("click", () => {
+        if(music.paused){ music.play(); button.textContent = "Вимкнути музику"; } 
+        else { music.pause(); button.textContent = "Увімкнути музику"; }
+    });
+</script>
+</body>
+</html>
